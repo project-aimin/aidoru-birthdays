@@ -4,5 +4,11 @@ body{
  font-family: 'NanumSquare', sans-serif;
 }
 
+#authorinfo,#caution,#lastchange{text-align: center;}
+
+#birthday_table{
+ height:500px;
+ overflow: auto;
+}
 
 table,thead,tbody,th,tr,td{border: 1px solid #000000;}
