@@ -1,0 +1,8 @@
+
+body{
+ font-size: 13pt;
+ font-family: 'NanumSquare', sans-serif;
+}
+
+
+table,thead,tbody,th,tr,td{border: 1px solid #000000;}
