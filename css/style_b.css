@@ -6,6 +6,11 @@ body{
 
 #authorinfo,#caution,#lastchange{text-align: center;}
 
+#licenseinfo{
+ text-align: center;
+ font-size: 0.85em;
+}
+
 #birthday_table{
  height: 360px;
  overflow: auto;
