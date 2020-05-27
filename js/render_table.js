@@ -1,5 +1,3 @@
-
-
 var renderTable = {
  run : function(jsonFilePath,tableID,insertTo){
   var fetchFile = new XMLHttpRequest();
