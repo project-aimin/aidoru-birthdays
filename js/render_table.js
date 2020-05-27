@@ -10,10 +10,11 @@ var renderTable = {
     var tableHeader = document.createElement("tr");
     for(r=0;r<rowTitle.length;r++){
      var rowsEach = document.createElement("th");
+     rowsEach.id = "entryrow_"+(r+1);
      rowsEach.appendChild(document.createTextNode(rowTitle[r]));
      tableHeader.appendChild(rowsEach);
     }
-    
+
     wholeTable.appendChild(tableHeader);
     var entriesData = rawData.entries;
     for(e=0;e<entriesData.length;e++){
@@ -30,5 +31,11 @@ var renderTable = {
   };
   fetchFile.open("GET",jsonFilePath);
   fetchFile.send();
+ },
+ setRowWidth : function(widthData,tableID){
+  for(i=0;i<widthData.length;i++){
+    $(document.getElementById(tableID)).children()[0].childNodes[i].setAttribute("width",widthData[i]+"%");
+  }
+
  }
 };
