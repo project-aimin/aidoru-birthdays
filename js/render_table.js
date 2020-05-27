@@ -2,7 +2,7 @@ var renderTable = {
  run : function(jsonFilePath,tableID,insertTo){
   var fetchFile = new XMLHttpRequest();
   fetchFile.onreadystatechange = function(){
-   var rawData = JSON.stringify(fetchFile.responseText);
+   var rawData = JSON.parse(fetchFile.responseText);
    var rowTitle = rawData.rows;
 
    var wholeTable = document.createElement("table");
