@@ -14,7 +14,10 @@ var renderTable = {
    for(r=0;r<rowTitle.length;r++){
     var rowsEach = document.createElement("th");
     rowsEach.appendChild(document.createTextNode(rowTitle[r]));
+    tableHeader.appendChild(rowsEach);
    }
+
+   wholeTable.appendChild(tableHeader);
 
    var entriesData = rawData.entries;
    for(e=0;e<entriesData.length;e++){
