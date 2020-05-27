@@ -12,6 +12,9 @@ body{
  font-size: 0.85em;
 }
 
+#entryrow_1{width: 10%;}
+#entryrow_2,#entryrow_3{width: 45%;}
+
 #authorinfo,#caution,#lastchange{text-align: center;}
 
 #licenseinfo{

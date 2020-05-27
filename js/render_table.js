@@ -31,11 +31,5 @@ var renderTable = {
   };
   fetchFile.open("GET",jsonFilePath);
   fetchFile.send();
- },
- setRowWidth : function(widthData,tableID){
-  for(i=0;i<widthData.length;i++){
-    $(document.getElementById(tableID)).children()[0].childNodes[i].setAttribute("width",widthData[i]+"%");
-  }
-
  }
 };
