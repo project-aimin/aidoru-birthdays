@@ -11,7 +11,7 @@ var renderTable = {
     for(r=0;r<rowTitle.length;r++){
      var rowsEach = document.createElement("th");
      rowsEach.id = "entryrow_"+(r+1);
-     rowsEach.appendChild(document.createTextNode(rowTitle[r]));
+     rowsEach.appendChild(document.createTextNode(rowTitle[r].replace("\n","<br />")));
      tableHeader.appendChild(rowsEach);
     }
 
@@ -21,7 +21,7 @@ var renderTable = {
      var entriesEach = document.createElement("tr");
      for(d=0;d<rowTitle.length;d++){
       var datasEach = document.createElement("td");
-      datasEach.appendChild(document.createTextNode(entriesData[e][d]));
+      datasEach.appendChild(document.createTextNode(entriesData[e][d].replace("\n","<br />")));
       entriesEach.appendChild(datasEach);
      }
      wholeTable.appendChild(entriesEach);
