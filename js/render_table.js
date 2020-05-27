@@ -1,7 +1,7 @@
 
 
 var renderTable = {
- run = function(jsonFilePath,tableID,insertTo){
+ run : function(jsonFilePath,tableID,insertTo){
   var fetchFile = new XMLHttpRequest();
   fetchFile.onreadystatechange = function(){
    var rawData = JSON.parse(fetchFile.responseText);
@@ -9,7 +9,7 @@ var renderTable = {
 
    var wholeTable = document.createElement("table");
    wholeTable.id = tableID;
-   
+
    var tableHeader = document.createElement("tr");
    for(r=0;r<rowTitle.length;r++){
     var rowsEach = document.createElement("th");
