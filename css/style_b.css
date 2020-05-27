@@ -4,6 +4,14 @@ body{
  font-family: 'NanumSquare', sans-serif;
 }
 
+#birthday_list{
+ text-align: center;
+ margin: auto;
+ width: 26em;
+ overflow: auto;
+ font-size: 0.85em;
+}
+
 #authorinfo,#caution,#lastchange{text-align: center;}
 
 #licenseinfo{
