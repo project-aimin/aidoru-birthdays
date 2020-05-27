@@ -28,5 +28,7 @@ var renderTable = {
    }
    document.getElementById(insertTo).appendChild(wholeTable);
   };
+  fetchFile.open("GET",jsonFilePath);
+  fetchFile.send();
  }
 };
