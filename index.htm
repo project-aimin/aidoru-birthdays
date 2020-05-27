@@ -7,7 +7,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css" />
 <link rel="stylesheet" type="text/css" href="css/style_b.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/render_table.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ renderTable.run("./birthday_table.json","birthday_list","birthday_table");
+ $("#birthday_list").css({"text-align": "center","margin": "auto","width": "26em","overflow": "auto","font-size": "0.85em"});
+});
+</script>
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 </head>
@@ -23,6 +31,7 @@
 </p>
 
 <div id="birthday_table">
+<!--
 <table style="text-align: center; margin: auto; width: 26em; overflow: auto; font-size: 0.85em;">
 <thead>
 <tr>
@@ -2289,6 +2298,7 @@
 </tr>
 </tbody>
 </table>
+-->
 </div>
 
 <p id="lastchange">최근 변경일: 2020.5.27</p>
