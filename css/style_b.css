@@ -13,7 +13,8 @@ body{
 }
 
 #entryrow_1{width: 10%;}
-#entryrow_2,#entryrow_3{width: 45%;}
+#entryrow_2{width: 40%;}
+#entryrow_3{width: 50%;}
 
 #authorinfo,#caution,#lastchange{text-align: center;}
 
