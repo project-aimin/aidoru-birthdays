@@ -36,6 +36,7 @@ var renderTable = {
  highlight : function(){
   var today = new Date();
   var d = (today.getMonth()+1)+"/"+(today.getDate());
+  console.log(d);
   $("tr[data-calendar-day='"+d+"']").css("background-color","#EEEEAA");
  }
 };
