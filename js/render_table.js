@@ -24,6 +24,7 @@ var renderTable = {
       datasEach.innerHTML = entriesData[e][d].replace("\n","<br />");
       entriesEach.appendChild(datasEach);
      }
+     entriesEach.setAttribute("data-calendar-day",entriesData[e][0]);
      wholeTable.appendChild(entriesEach);
     }
     document.getElementById(insertTo).appendChild(wholeTable);
