@@ -28,15 +28,13 @@ var renderTable = {
      wholeTable.appendChild(entriesEach);
     }
     document.getElementById(insertTo).appendChild(wholeTable);
+    var today = new Date();
+    var dt = (today.getMonth()+1)+"/"+(today.getDate());
+    $(`tr[data-calendar-day='${dt}']`).css("background-color","#EEEEAA");
    }
   };
   fetchFile.open("GET",jsonFilePath);
   fetchFile.send();
- },
- highlight : function(){
-  var today = new Date();
-  var d = (today.getMonth()+1)+"/"+(today.getDate());
-  console.log(d);
-  $("tr[data-calendar-day='"+d+"']").css("background-color","#EEEEAA");
  }
 };
+
