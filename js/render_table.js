@@ -29,8 +29,11 @@ var renderTable = {
     }
     document.getElementById(insertTo).appendChild(wholeTable);
     var today = new Date();
-    var dt = (today.getMonth()+1)+"/"+(today.getDate());
-    $(`tr[data-calendar-day='${dt}']`).css("background-color","#EEEEAA");
+    var mon = (today.getMonth()+1);
+    var day = (today.getDate());
+    var md = mon+"/"+day;
+    $(`tr[data-calendar-day^='${mon}']`).css("background-color","#FFFFEE");
+    $(`tr[data-calendar-day='${md}']`).css("background-color","#EEEEAA");
    }
   };
   fetchFile.open("GET",jsonFilePath);
