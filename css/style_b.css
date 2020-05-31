@@ -16,7 +16,7 @@ body{
 #entryrow_2{width: 40%;}
 #entryrow_3{width: 50%;}
 
-#authorinfo,#caution,#lastchange{text-align: center;}
+#authorinfo,#legends,#caution,#lastchange{text-align: center;}
 
 #licenseinfo{
  text-align: center;
