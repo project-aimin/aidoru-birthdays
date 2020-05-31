@@ -32,5 +32,10 @@ var renderTable = {
   };
   fetchFile.open("GET",jsonFilePath);
   fetchFile.send();
+ },
+ highlight : function(){
+  var today = new Date();
+  var d = (today.getMonth()+1)+"/"+(today.getDate());
+  $("tr[data-calendar-day='"+d+"']").css("background-color","#EEEEAA");
  }
 };
