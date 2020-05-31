@@ -13,9 +13,6 @@
 <script type="text/javascript">
 $(document).ready(function(){
  renderTable.run("./data/birthday_table.json","birthday_list","birthday_table");
- var today = new Date();
- var d = (today.getMonth()+1)+"/"+(today.getDate());
- $("#birthday_list tr[data-calendar-day='"+d+"']").css("background-color","#EEEEAA");
 });
 </script>
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -33,6 +30,12 @@ $(document).ready(function(){
 </p>
 
 <div id="birthday_table"></div>
+
+<script type="text/javascript">
+ var today = new Date();
+ var d = (today.getMonth()+1)+"/"+(today.getDate());
+ $("tr[data-calendar-day='"+d+"']").css("background-color","#EEEEAA");
+</script>
 
 <p id="lastchange">최근 변경일: 2020.5.27</p>
 
