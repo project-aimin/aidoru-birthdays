@@ -1,5 +1,5 @@
 var renderTable = {
- run : function(jsonFilePath,tableID,insertTo){
+ run : function(jsonFilePath,tableID,insertTo,listTo){
   var fetchFile = new XMLHttpRequest();
   fetchFile.onreadystatechange = function(){
    if(this.readyState == 4 && this.status == 200){
@@ -34,6 +34,19 @@ var renderTable = {
     var md = mon+"/"+day;
     $(`tr[data-calendar-day^='${mon}']`).css("background-color","#FFFFEE");
     $(`tr[data-calendar-day='${md}']`).css("background-color","#EEEEAA");
+
+    document.getElementById("date_01").innerHTML = md;
+    var charasToday = $(`tr[data-calendar-day='${md}']`);
+    var numCharas = charasToday.length;
+
+    for(n=0;n<numCharas;n++){
+     var liEach = document.createElement("div");
+     liEach.id = `chara_${mon}${day}${n+1}`;
+     var cat = charasToday[n].getElementsByTagName("td")[1].innerText;
+     var chara = charasToday[n].getElementsByTagName("td")[2].innerText;
+     liEach.innerHTML = `${chara} (${cat})`;
+     document.getElementById(listTo).appendChild(liEach);
+    }
    }
   };
   fetchFile.open("GET",jsonFilePath);

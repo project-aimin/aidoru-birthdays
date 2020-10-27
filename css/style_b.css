@@ -29,3 +29,23 @@ body{
 }
 
 table,thead,tbody,th,tr,td{border: 1px solid #000000;}
+
+#birthday_today{
+text-align: center;
+justify-content: center;
+background-color: #F5F8FA;
+background-image: url('/assets/birthday_icon_trans.png');
+background-repeat: no-repeat;
+background-size: 87px;
+background-position: right bottom;
+font-size: 1em;
+width: 28.5em;
+margin-top: 1em;
+margin-left: auto;
+margin-right: auto;
+padding-top: 0.5em;
+padding-bottom: 1.5em;
+padding-left: 0.375em;
+padding-right: 0.375em;
+border-radius: 1.4em;
+}
