@@ -40,7 +40,7 @@ var renderTable = {
     var numCharas = charasToday.length;
 
     var scrollToday = charasToday.offset();
-    $("html,body").animate({scrollTop : scrollToday.top},100);
+    $(`#${insertTo}`).animate({scrollTop : scrollToday.top},100);
 
     if(numCharas == 0){document.getElementById(listTo).innerHTML = "오늘 생일인 캐릭터가 없습니다.";}
     else{
