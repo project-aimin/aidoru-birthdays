@@ -53,7 +53,7 @@ var renderTable = {
        document.getElementById(listTo).appendChild(liEach);
       }
      }
-    },500);
+    },1000);
    }
   };
   fetchFile.open("GET",jsonFilePath);
