@@ -65,6 +65,11 @@ var renderTable = {
   var md = mon+"/"+day;
 
   var charasToday = $(`tr[data-calendar-day='${md}']`);
+
+  if(charasToday.length == 0){
+   alert("오늘 생일인 캐릭터가 없습니다.");
+   return false;
+  }
   var scrollToday = charasToday.position().top - ($(`#${tableTo}`).height() / 2);
   
   $(`#${tableTo}`).animate({scrollTop : scrollToday},100);
