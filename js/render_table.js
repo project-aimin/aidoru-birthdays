@@ -65,9 +65,9 @@ var renderTable = {
   var md = mon+"/"+day;
 
   var charasToday = $(`tr[data-calendar-day='${md}']`);
-
-  var scrollToday = charasToday.position();
-  $(`#${tableTo}`).animate({scrollTop : scrollToday.top},100);
+  var scrollToday = (charasToday.position().top - $(`#${tableTo}`).height());
+  
+  $(`#${tableTo}`).animate({scrollTop : scrollToday},100);
  }
 };
 
