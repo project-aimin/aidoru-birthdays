@@ -28,6 +28,7 @@ var renderTable = {
       entriesEach.setAttribute("data-calendar-day",entriesData[e][0]);
       wholeTable.appendChild(entriesEach);
      }
+     document.getElementById(insertTo).innerHTML = "";
      document.getElementById(insertTo).appendChild(wholeTable);
      var today = new Date();
      var mon = (today.getMonth()+1);
