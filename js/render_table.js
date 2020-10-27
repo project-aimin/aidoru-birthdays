@@ -48,6 +48,7 @@ var renderTable = {
        var cat = charasToday[n].getElementsByTagName("td")[1].innerText;
        var chara = charasToday[n].getElementsByTagName("td")[2].innerText;
        liEach.innerHTML = `${chara} (${cat})`;
+       document.getElementById(listTo).innerHTML = "";
        document.getElementById(listTo).appendChild(liEach);
       }
      }
