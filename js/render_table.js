@@ -57,6 +57,17 @@ var renderTable = {
   };
   fetchFile.open("GET",jsonFilePath);
   fetchFile.send();
+ },
+ seekToday : function(tableTo){
+  var today = new Date();
+  var mon = (today.getMonth()+1);
+  var day = (today.getDate());
+  var md = mon+"/"+day;
+
+  var charasToday = $(`tr[data-calendar-day='${md}']`);
+
+  var scrollToday = charasToday.position();
+  $(`#${tableTo}`).animate({scrollTop : scrollToday.top},100);
  }
 };
 

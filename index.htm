@@ -27,6 +27,8 @@ $(document).ready(function(){
 <div id="birthday_today">
  <h3>오늘(<span id="date_01"></span>)이 생일인 캐릭터</h3>
  <div id="today_chara"></div>
+ <button id="seek_today">리스트에서 보기</button>
+ <script>document.getElementById("seek_today").addEventListener("click",function(){renderTable.seekToday("birthday_table");});</script>
 </div>
 
 <p id="legends">
