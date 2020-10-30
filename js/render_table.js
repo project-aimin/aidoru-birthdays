@@ -44,13 +44,13 @@ var renderTable = {
 
      if(numCharas == 0){document.getElementById(listTo).innerHTML = "오늘 생일인 캐릭터가 없습니다.";}
      else{
+      document.getElementById(listTo).innerHTML = "";
       for(n=0;n<numCharas;n++){
        var liEach = document.createElement("div");
        liEach.id = `chara_${mon}${day}_${n+1}`;
        var cat = charasToday[n].getElementsByTagName("td")[1].innerText;
        var chara = charasToday[n].getElementsByTagName("td")[2].innerText;
        liEach.innerHTML = `${chara} (${cat})`;
-       document.getElementById(listTo).innerHTML = "";
        document.getElementById(listTo).appendChild(liEach);
       }
      }
