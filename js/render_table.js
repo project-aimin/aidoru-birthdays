@@ -50,6 +50,7 @@ var renderTable = {
        liEach.id = `chara_${mon}${day}_${n+1}`;
        var cat = charasToday[n].getElementsByTagName("td")[1].innerText;
        var chara = charasToday[n].getElementsByTagName("td")[2].innerText;
+       cat = cat.replace("\n",", ");
        liEach.innerHTML = `${chara} (${cat})`;
        document.getElementById(listTo).appendChild(liEach);
       }
