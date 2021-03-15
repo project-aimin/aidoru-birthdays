@@ -1,8 +1,11 @@
+var weekdayNames = ["일","월","화","수","목","금","토"];
+
 var renderTable = {
  run : function(jsonFilePath,tableID,insertTo,listTo){
   var fetchFile = new XMLHttpRequest();
   fetchFile.onreadystatechange = function(){
    if(this.readyState == 4 && this.status == 200){
+    var yearNow = (new Date()).getFullYear();
     var rawData = JSON.parse(fetchFile.responseText);
     var rowTitle = rawData.rows;
     var wholeTable = document.createElement("table");
@@ -21,6 +24,8 @@ var renderTable = {
      var entriesEach = document.createElement("tr");
      for(d=0;d<rowTitle.length;d++){
       var datasEach = document.createElement("td");
+      var entryWeekday = (new Date(`${yearNow}/${entriesData[e][0]}`)).getDay();
+      if(d == 0){entriesData[e][d]+=`(${entryWeekday})`;}
       datasEach.innerHTML = entriesData[e][d].replace("\n","<br />");
       entriesEach.appendChild(datasEach);
      }
