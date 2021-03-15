@@ -25,7 +25,7 @@ var renderTable = {
      for(d=0;d<rowTitle.length;d++){
       var datasEach = document.createElement("td");
       var entryWeekday = (new Date(`${yearNow}/${entriesData[e][0]}`)).getDay();
-      if(d == 0){entriesData[e][d]+=`(${entryWeekday})`;}
+      if(d == 0){entriesData[e][d]+=`(${weekdayNames[entryWeekday]})`;}
       datasEach.innerHTML = entriesData[e][d].replace("\n","<br />");
       entriesEach.appendChild(datasEach);
      }
