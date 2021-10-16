@@ -25,6 +25,7 @@ body{
 
 #birthday_table{
  height: 360px;
+ font-size: 0.95em;
  overflow: auto;
 }
 
