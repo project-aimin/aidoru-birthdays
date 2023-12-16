@@ -35,6 +35,9 @@ var renderTable = {
      if(typeof entriesData[e+1] != "undefined"){
       var monEntryCur = new Number(entriesData[e][0].split("/")[0]);
       var monEntryNext = new Number(entriesData[e+1][0].split("/")[0]);
+
+      console.log(monEntryCur+"-"+monEntryNext);
+      
       if(monEntryCur != monEntryNext){
        var monthsEach = document.createElement("th");
        var monthLine = document.createElement("td");
