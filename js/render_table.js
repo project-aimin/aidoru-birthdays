@@ -23,8 +23,8 @@ var renderTable = {
     for(e=0;e<entriesData.length;e++){
      var entriesEach = document.createElement("tr");
 
-     var monEntryCur = new Number(entriesData[e-1][0].split("/")[0]);
-     var monEntryNext = new Number(entriesData[e][0].split("/")[0]);
+     var monEntryCur = new Number(entriesData[e][0].split("/")[0]);
+     var monEntryNext = new Number(entriesData[e+1][0].split("/")[0]);
      if(monEntryCur != monEntryNext){
       var monthsEach = document.createElement("th");
       var monthLine = document.createElement("td");
