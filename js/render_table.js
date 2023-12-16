@@ -29,9 +29,19 @@ var renderTable = {
       else{datasEach.innerHTML = entriesData[e][d].replace("\n","<br />");}
       entriesEach.appendChild(datasEach);
      }
-
      entriesEach.setAttribute("data-calendar-day",entriesData[e][0]);
      wholeTable.appendChild(entriesEach);
+
+     var monEntryCur = new Number(entriesData[e][0].split("/")[0]);
+     var monEntryNext = new Number(entriesData[e+1][0].split("/")[0]);
+     if(monEntryCur != monEntryNext){
+      var monthsEach = document.createElement("th");
+      var monthLine = document.createElement("td");
+      monthLine.setAttribute("colspan","3");
+      monthsEach.appendChild(monthLine);
+      wholeTable.appendChild(monthsEach);
+     }
+
     }
     document.getElementById(insertTo).innerHTML = "";
     document.getElementById(insertTo).appendChild(wholeTable);
