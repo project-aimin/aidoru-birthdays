@@ -39,8 +39,8 @@ var renderTable = {
       console.log(monEntryCur+"-"+monEntryNext);
 
       if(monEntryCur-monEntryNext != 0){
-       var monthsEach = document.createElement("th");
-       var monthLine = document.createElement("td");
+       var monthsEach = document.createElement("tr");
+       var monthLine = document.createElement("th");
        monthLine.colSpan="3";
        monthLine.appendChild(document.createTextNode(`${monEntryNext}월`));
        monthsEach.appendChild(monthLine);
