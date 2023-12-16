@@ -38,7 +38,7 @@ var renderTable = {
 
       console.log(monEntryCur+"-"+monEntryNext);
 
-      if(monEntryCur !== monEntryNext){
+      if(monEntryCur-monEntryNext != 0){
        var monthsEach = document.createElement("th");
        var monthLine = document.createElement("td");
        monthLine.setAttribute("colspan","3");
