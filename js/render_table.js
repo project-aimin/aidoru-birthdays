@@ -41,7 +41,7 @@ var renderTable = {
       if(monEntryCur-monEntryNext != 0){
        var monthsEach = document.createElement("th");
        var monthLine = document.createElement("td");
-       monthLine.setAttribute("colspan","3");
+       monthLine.colSpan="3";
        monthLine.appendChild(document.createTextNode(`${monEntryNext}월`));
        monthsEach.appendChild(monthLine);
        wholeTable.appendChild(monthsEach);
