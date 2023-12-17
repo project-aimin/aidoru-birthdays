@@ -19,6 +19,14 @@ var renderTable = {
     }
 
     wholeTable.appendChild(tableHeader);
+
+    var januaryEntry = document.createElement("tr");
+    var januaryLine = document.createElement("th");
+    januaryLine.colSpan="3";
+    januaryLine.appendChild(document.createTextNode("1월"));
+    januaryEntry.appendChild(januaryLine);
+    wholeTable.appendChild(januaryLine);
+
     var entriesData = rawData.entries;
     for(e=0;e<entriesData.length;e++){
      var entriesEach = document.createElement("tr");     
