@@ -36,7 +36,7 @@ var renderTable = {
       var monEntryCur = new Number(entriesData[e][0].split("/")[0]);
       var monEntryNext = new Number(entriesData[e+1][0].split("/")[0]);
 
-      console.log(monEntryCur+"-"+monEntryNext);
+      console.log(monEntryCur-monEntryNext);
 
       if(monEntryCur-monEntryNext != 0){
        var monthsEach = document.createElement("tr");
