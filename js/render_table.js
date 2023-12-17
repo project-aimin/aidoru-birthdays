@@ -21,6 +21,17 @@ var renderTable = {
     wholeTable.appendChild(tableHeader);
     var entriesData = rawData.entries;
     for(e=0;e<entriesData.length;e++){
+     var entriesEach = document.createElement("tr");     
+     for(d=0;d<rowTitle.length;d++){
+      var datasEach = document.createElement("td");
+      var entryWeekday = (new Date(`${yearNow}/${entriesData[e][0]}`)).getDay();
+      if(d == 0){datasEach.innerHTML = (entriesData[e][d]+`(${weekdayNames[entryWeekday]})`).replace("\n","<br />");}
+      else{datasEach.innerHTML = entriesData[e][d].replace("\n","<br />");}
+      entriesEach.appendChild(datasEach);
+     }
+     entriesEach.setAttribute("data-calendar-day",entriesData[e][0]);
+     wholeTable.appendChild(entriesEach);
+
      if(typeof entriesData[e+1] != "undefined"){
       var monEntryCur = new Number(entriesData[e][0].split("/")[0]);
       var monEntryNext = new Number(entriesData[e+1][0].split("/")[0]);
@@ -34,18 +45,6 @@ var renderTable = {
        wholeTable.appendChild(monthsEach);
       }
      }
-     var entriesEach = document.createElement("tr");     
-     for(d=0;d<rowTitle.length;d++){
-      var datasEach = document.createElement("td");
-      var entryWeekday = (new Date(`${yearNow}/${entriesData[e][0]}`)).getDay();
-      if(d == 0){datasEach.innerHTML = (entriesData[e][d]+`(${weekdayNames[entryWeekday]})`).replace("\n","<br />");}
-      else{datasEach.innerHTML = entriesData[e][d].replace("\n","<br />");}
-      entriesEach.appendChild(datasEach);
-     }
-     entriesEach.setAttribute("data-calendar-day",entriesData[e][0]);
-     wholeTable.appendChild(entriesEach);
-
-
     }
     document.getElementById(insertTo).innerHTML = "";
     document.getElementById(insertTo).appendChild(wholeTable);
