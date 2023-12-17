@@ -21,6 +21,19 @@ var renderTable = {
     wholeTable.appendChild(tableHeader);
     var entriesData = rawData.entries;
     for(e=0;e<entriesData.length;e++){
+     if(typeof entriesData[e+1] != "undefined"){
+      var monEntryCur = new Number(entriesData[e][0].split("/")[0]);
+      var monEntryNext = new Number(entriesData[e+1][0].split("/")[0]);
+
+      if(monEntryCur-monEntryNext != 0){
+       var monthsEach = document.createElement("tr");
+       var monthLine = document.createElement("th");
+       monthLine.colSpan="3";
+       monthLine.appendChild(document.createTextNode(`${monEntryNext}월`));
+       monthsEach.appendChild(monthLine);
+       wholeTable.appendChild(monthsEach);
+      }
+     }
      var entriesEach = document.createElement("tr");     
      for(d=0;d<rowTitle.length;d++){
       var datasEach = document.createElement("td");
@@ -32,21 +45,7 @@ var renderTable = {
      entriesEach.setAttribute("data-calendar-day",entriesData[e][0]);
      wholeTable.appendChild(entriesEach);
 
-     if(typeof entriesData[e+1] != "undefined"){
-      var monEntryCur = new Number(entriesData[e][0].split("/")[0]);
-      var monEntryNext = new Number(entriesData[e+1][0].split("/")[0]);
 
-      console.log(`${monEntryCur}//${monEntryCur-monEntryNext}`);
-
-      if(monEntryCur-monEntryNext != 0){
-       var monthsEach = document.createElement("tr");
-       var monthLine = document.createElement("th");
-       monthLine.colSpan="3";
-       monthLine.appendChild(document.createTextNode(`${monEntryNext}월`));
-       monthsEach.appendChild(monthLine);
-       wholeTable.appendChild(monthsEach);
-      }
-     }
     }
     document.getElementById(insertTo).innerHTML = "";
     document.getElementById(insertTo).appendChild(wholeTable);
