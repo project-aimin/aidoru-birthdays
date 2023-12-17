@@ -32,9 +32,9 @@ var renderTable = {
      entriesEach.setAttribute("data-calendar-day",entriesData[e][0]);
      wholeTable.appendChild(entriesEach);
 
-     if(typeof entriesData[e+1] != "undefined"){
-      var monEntryCur = new Number(entriesData[e][0].split("/")[0]);
-      var monEntryNext = new Number(entriesData[e+1][0].split("/")[0]);
+     if(typeof entriesData[e-1] != "undefined"){
+      var monEntryCur = new Number(entriesData[e-1][0].split("/")[0]);
+      var monEntryNext = new Number(entriesData[e][0].split("/")[0]);
 
       console.log(monEntryCur+"-"+monEntryNext);
 
